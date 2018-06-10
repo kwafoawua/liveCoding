@@ -1,0 +1,6 @@
+{
+    "name": "LiveCoding2",
+    "dependencies": {
+        codemirror
+    }
+}

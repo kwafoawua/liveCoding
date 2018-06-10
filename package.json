@@ -1,0 +1,34 @@
+{
+  "name": "livecoding2",
+  "version": "1.0.0",
+  "description": "Live Coding editor with ShareJS 0.7",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bootstrap": "^3.3.6",
+    "codemirror": "^5.13.0",
+    "livedb": "^0.5.13",
+    "ip": "^1.1.2",
+    "express": "^4.13.4",
+    "share-codemirror": "^0.1.0",
+    "ws": "^1.0.1",
+    "share": "^0.7.40",
+    "sessionstorage": "^0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "livecoding",
+    "live",
+    "coding",
+    "editor",
+    "sharejs",
+    "real",
+    "time",
+    "collaboration"
+  ],
+  "author": "Afua Kwafo Awua",
+  "license": "ISC"
+}

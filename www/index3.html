@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>ShareJS Afua Example</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="/codemirror.css" type="text/css">
+    <link rel="stylesheet" href="css/paraiso-dark.css" type="text/css">
+
+</header>
+
+<body>
+    <div id="lc-title">Live Coding Editor</div>
+    <input type="text" id="logName">
+    <button id="login">Login</button>
+    <hr>
+    <textarea id="codemir" autofocus>function logLiveCoding()
+        <br> {
+        <br> var textArea = document.getElementById('codemir');
+        <br> var cm = CodeMirror.fromTextArea(textArea,
+        <br> { lineNumbers: true, styleActiveLine: true, matchBrackets: true, value: 'function myScript(){return 100;}\n', });
+        <br> cm.setOption('mode', 'javascript');
+        <br> var ws = new WebSocket('ws://' + window.location.host);
+        <br> var sjs = new window.sharejs.Connection(ws);
+        <br> var doc = sjs.get('users', 'seph');
+        <br> console.log(doc); doc.subscribe();
+        <br> doc.whenReady(function () { if (!doc.type)
+        <br> { doc.create('text'); }
+        <br> if (doc.type && doc.type.name === 'text')
+        <br> { var context = doc.createContext(); context.insert(0, cm.getValue()); doc.attachCodeMirror(cm); } }); }
+        <br>
+    </textarea>
+    <div id="userList">
+        <table>
+
+        </table>
+    </div>
+    <script src="/share.js"></script>
+    <script src="/codemirror.js"></script>
+    <script src="/share-codemirror.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/client.js"></script>
+    <span id='sessionId'></span>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Live Coding Editor</title>
+
+    <!-- Bootstrap -->
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/codemirror.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/paraiso-dark.css" type="text/css">
+  </head>
+  <body>
+   <div class="jumbotron text-center">
+  <h1>Live Coding Editor</h1>
+  <p>Real-Time editor to work collaboratively with your team.</p>
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Codemirror Editor</h3>
+      <textarea class="form-control" id="codemir" autofocus>Connecting to server...
+    </textarea>
+    </div>
+    <div class="col-md-6">
+      <h3>Users Position</h3>
+      <div id="userList">
+        <table class="table">
+
+        </table>
+    </div>
+    </div>
+  </div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+        <script src="/share.js"></script>
+    <script src="/codemirror.js"></script>
+    <script src="/share-codemirror.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/client.js"></script>
+  </body>
+</html>
